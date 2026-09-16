@@ -23,3 +23,17 @@ No inicio da atividade, começamos usando o Docker Compose classico, onde eu ger
 ###### O Swarm traz balanceamento de carga nativo. Quando uma requisição chega na porta 8080 de qualquer nó do cluster, a malha de roteamento interna distribui as requisições em modelo Round-Robin entre as réplicas ativas do serviço.
 
 
+--------------------
+## Logs
+#### docker stack services aponti
+
+aqui é o comando para ver os serviços rodando e as réplicas ativas.
+"APONTI" é o Manager
+
+
+ID             NAME                 MODE         REPLICAS   IMAGE                 PORTS
+ulo9gj75z4nm   aponti_api-gateway   replicated   2/2        aponti-gateway:v1     *:8080->8080/tcp
+z726ue16xztn   aponti_database      replicated   0/1        postgres:15-alpine    
+y992qxao3xai   aponti_inventory     replicated   0/3        aponti-inventory:v1   
+lb2lpvomuiy1   aponti_order         replicated   0/3        aponti-order:v1       
+aokgg1t07qgv   aponti_product       replicated   0/3        aponti-product:v1  

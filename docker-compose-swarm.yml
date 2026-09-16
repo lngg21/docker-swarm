@@ -95,4 +95,4 @@ services:
       resources:
         limits:
           cpus: '0.50'
-          memory: 256Ms
+          memory: 256M
